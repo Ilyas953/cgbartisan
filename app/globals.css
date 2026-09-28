@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b0b0c;
+  --ink-soft: #17171a;
+  --ink-line: rgba(255, 255, 255, 0.12);
+  --paper: #131315;
+  --paper-soft: #1c1c1f;
+  --paper-line: rgba(255, 255, 255, 0.09);
+  --gold: #c6a15b;
+  --gold-soft: rgba(198, 161, 91, 0.16);
+  --gold-line: rgba(198, 161, 91, 0.4);
+  --muted: rgba(244, 241, 234, 0.62);
+  --muted-on-dark: rgba(255, 255, 255, 0.64);
+  --text: #f4f1ea;
+}
+
+@theme inline {
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* ---------- Layout ---------- */
+.section-pad {
+  padding: 96px clamp(24px, 5vw, 80px);
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrap-pad {
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 52px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-title {
+  font-size: clamp(30px, 3.4vw, 42px);
+  font-weight: 500;
+}
+
+.section-title-sm {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 500;
+}
+
+/* ---------- Buttons ---------- */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: filter 0.15s;
+}
+
+.btn-gold:hover {
+  filter: brightness(1.1);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--gold);
+}
+
+/* ---------- Form ---------- */
+input,
+textarea,
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--ink-line);
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+select option {
+  color: #111;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+label {
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted-on-dark);
+  display: block;
+  margin-bottom: 7px;
+}
+
+/* ---------- Cards & chips ---------- */
+.chip {
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-line);
+  background: var(--paper-soft);
+  font-size: 13.5px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.photo-frame {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border: 1px solid var(--gold-line);
+  border-radius: 6px;
+  background: var(--paper-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .grid-6 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-6 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .avant-apres {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-phone {
+    display: none !important;
+  }
+}
