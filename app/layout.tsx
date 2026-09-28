@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${manrope.variable}`}>
+      <head><meta name="google-site-verification" content="ckLWzufPHkuIVdIRGVCotSPHU19treO_I_j8ASis_vM" /></head>
       <body>{children}</body>
     </html>
   );
