@@ -15,12 +15,12 @@ export default function Zone() {
         <div className="flex flex-col gap-4">
           <span className="eyebrow">Zone d&apos;intervention</span>
           <h2 className="text-[clamp(28px,3.2vw,40px)] font-medium">
-            Basé à Mouroux, à votre service dans le 77
+            Couvreur à Mouroux et dans tout le 77 : notre zone d&apos;intervention
           </h2>
           <p className="text-base leading-[1.7] text-[var(--muted)]">
-            C.G.B Artisan intervient à Mouroux et dans les communes voisines de
-            Seine-et-Marne pour tous vos projets de couverture, rénovation et
-            zinguerie.
+            C.G.B Artisan, couvreur basé à Mouroux, intervient dans les
+            communes voisines de Seine-et-Marne pour tous vos projets de
+            couverture, rénovation de toiture et zinguerie.
           </p>
           <ul className="mt-2 flex flex-wrap gap-2.5">
             {towns.map((t) => (

@@ -8,7 +8,7 @@ export default function Reviews() {
         <div className="section-head">
           <span className="eyebrow">Avis clients</span>
           <h2 className="section-title text-white">
-            Ce que disent nos clients
+            Avis de nos clients à Mouroux et en Seine-et-Marne
           </h2>
         </div>
 

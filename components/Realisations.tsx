@@ -2,12 +2,24 @@ import Image from "next/image";
 
 const pairs = [
   [
-    { src: "/images/realisation-1.webp", alt: "Toiture — chantier réalisé par C.G.B Artisan" },
-    { src: "/images/realisation-2.webp", alt: "Toiture — finitions du chantier" },
+    {
+      src: "/images/realisation-1.webp",
+      alt: "Vue aérienne d'une toiture en tuiles rouges avec fenêtres de toit, chantier de couverture en Seine-et-Marne",
+    },
+    {
+      src: "/images/realisation-2.webp",
+      alt: "Couvreur au travail sur une toiture en tuiles terre cuite sécurisée par un garde-corps, vue drone",
+    },
   ],
   [
-    { src: "/images/realisation-3.webp", alt: "Couverture — chantier en cours" },
-    { src: "/images/realisation-4.webp", alt: "Couverture — chantier terminé" },
+    {
+      src: "/images/realisation-3.webp",
+      alt: "Toiture gris anthracite avec fenêtres de toit, vue aérienne d'une rénovation de toiture",
+    },
+    {
+      src: "/images/realisation-4.webp",
+      alt: "Toiture gris anthracite d'une maison individuelle, couverture réalisée par C.G.B Artisan",
+    },
   ],
 ];
 
@@ -17,6 +29,13 @@ export default function Realisations() {
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">Nos réalisations</span>
+          <h2 className="section-title">
+            Nos chantiers de couverture et de rénovation de toiture en
+            Seine-et-Marne
+          </h2>
+          <p className="text-base leading-[1.6] text-[var(--muted)]">
+            Quelques toitures réalisées et rénovées par C.G.B Artisan.
+          </p>
         </div>
 
         <div className="flex flex-col gap-12">

@@ -39,11 +39,11 @@ export default function Contact() {
         <div className="flex flex-col gap-5">
           <span className="eyebrow">Contact</span>
           <h2 className="text-[clamp(28px,3.2vw,40px)] font-medium">
-            Un projet de toiture ?
+            Devis gratuit : couvreur à Mouroux et en Seine-et-Marne
           </h2>
           <p className="text-base leading-[1.7] text-[var(--muted)]">
-            Contactez C.G.B Artisan pour un devis gratuit et personnalisé, sans
-            engagement.
+            Un projet de toiture ? Contactez C.G.B Artisan pour un devis
+            gratuit et personnalisé, sans engagement.
           </p>
           <div className="mt-2 flex flex-col gap-4">
             <ContactRow href={site.phoneHref} icon={<PhoneIcon size={16} />}>

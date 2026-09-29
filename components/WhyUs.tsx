@@ -27,7 +27,7 @@ export default function WhyUs() {
         <div className="flex flex-col gap-[18px]">
           <span className="eyebrow">Pourquoi nous choisir</span>
           <h2 className="text-[clamp(28px,3.2vw,40px)] font-medium text-white">
-            Un artisan de confiance pour votre projet
+            Pourquoi choisir C.G.B Artisan, votre couvreur à Mouroux ?
           </h2>
           <p className="text-base leading-[1.7] text-[var(--muted-on-dark)]">
             {site.owner} met son savoir-faire artisanal au service des

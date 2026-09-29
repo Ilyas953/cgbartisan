@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden h-[90vh]">
       <Image
         src="/images/hero.webp"
-        alt="Toiture en ardoise rénovée par C.G.B Artisan, couvreur à Mouroux (77)"
+        alt="Vue aérienne d'une toiture en tuiles rouges avec fenêtres de toit, chantier de couverture par C.G.B Artisan, couvreur à Mouroux (77)"
         fill
         priority
         sizes="100vw"
@@ -22,16 +22,14 @@ export default function Hero() {
       />
 
       <div className="wrap-pad relative flex flex-col gap-[26px] pb-[110px] pt-[196px] max-sm:pt-[120px]">
-        <span className="eyebrow">
-          
-        </span>
         <h1 className="w-[70vw] text-[clamp(38px,5vw,64px)] font-medium leading-[1.09] text-white">
-          L&apos;excellence artisanale au service de votre toiture Couvreur qualifié · Mouroux &amp; Seine-et-Marne (77)
+          Couvreur à Mouroux (77) : l&apos;excellence artisanale au service de
+          votre toiture
         </h1>
         <p className="max-w-[600px] text-[17.5px] leading-[1.65] text-[var(--muted-on-dark)]">
-          Couverture, rénovation de toiture, zinguerie et étanchéité. Un
-          savoir-faire artisanal et des finitions soignées, à Mouroux et dans
-          toute la Seine-et-Marne.
+          Couverture, rénovation de toiture, zinguerie et étanchéité à Mouroux
+          et dans toute la Seine-et-Marne. Un savoir-faire artisanal, des
+          finitions soignées et un devis gratuit sous 24h.
         </p>
         <div className="mt-2.5 flex flex-wrap gap-4">
           <a

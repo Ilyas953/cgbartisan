@@ -15,15 +15,32 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const title = "C.G.B Artisan — Couvreur à Mouroux (77)";
+const title = "Couvreur Mouroux (77) — Toiture & Zinguerie | C.G.B Artisan";
 const description =
-  "Couverture, rénovation de toiture, zinguerie et étanchéité à Mouroux et dans toute la Seine-et-Marne (77). Devis gratuit sous 24h.";
+  "Couvreur à Mouroux (77) : couverture, rénovation de toiture, zinguerie, étanchéité et démoussage en Seine-et-Marne. Devis gratuit sous 24h.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: title, template: `%s — ${site.name}` },
   description,
+  applicationName: site.name,
+  authors: [{ name: site.owner }],
+  creator: site.owner,
   alternates: { canonical: "/" },
+  verification: {
+    google: "ckLWzufPHkuIVdIRGVCotSPHU19treO_I_j8ASis_vM",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -31,20 +48,18 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    images: [{ url: "/images/hero.webp", alt: "Toiture réalisée par C.G.B Artisan" }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/hero.webp"],
+    images: ["/opengraph-image"],
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${manrope.variable}`}>
-      <head><meta name="google-site-verification" content="ckLWzufPHkuIVdIRGVCotSPHU19treO_I_j8ASis_vM" /></head>
       <body>{children}</body>
     </html>
   );
