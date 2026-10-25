@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { navLinks, site } from "@/lib/site";
+import { villes } from "@/lib/villes";
 
 const footerLinks = navLinks.map((l) =>
-  l.href === "#avis" ? { ...l, label: "Avis clients" } : l,
+  l.href === "/#avis" ? { ...l, label: "Avis clients" } : l,
 );
 
 export default function Footer() {
   return (
     <footer className="wrap-pad border-t border-[var(--gold-line)] bg-[var(--ink)] pb-7 pt-[60px]">
-      <div className="wrap grid-3 grid grid-cols-[1.4fr_1fr_1fr] gap-11 border-b border-[var(--ink-line)] pb-9">
+      <div className="wrap grid-3 grid grid-cols-[1.4fr_1fr_1fr_1fr] gap-11 border-b border-[var(--ink-line)] pb-9">
         <div className="flex flex-col gap-3.5">
           <div className="flex items-center gap-3">
             <div className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[var(--gold)]">
@@ -41,6 +42,27 @@ export default function Footer() {
           ))}
         </nav>
 
+        <nav className="flex flex-col gap-3" aria-label="Zones d'intervention">
+          <span className="mb-1 text-[13px] font-bold uppercase tracking-[0.06em] text-white">
+            Zones d&apos;intervention
+          </span>
+          <Link
+            href="/"
+            className="text-[13.5px] text-[var(--muted-on-dark)] transition-colors hover:text-[var(--gold)]"
+          >
+            Couvreur à Mouroux (77)
+          </Link>
+          {villes.map((v) => (
+            <Link
+              key={v.slug}
+              href={`/${v.slug}`}
+              className="text-[13.5px] text-[var(--muted-on-dark)] transition-colors hover:text-[var(--gold)]"
+            >
+              Couvreur à {v.name} ({v.departmentCode})
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex flex-col gap-3">
           <span className="mb-1 text-[13px] font-bold uppercase tracking-[0.06em] text-white">
             Contact
@@ -65,7 +87,7 @@ export default function Footer() {
 
       <div className="wrap flex flex-wrap justify-between gap-3 pt-[22px] text-[12.5px] text-[var(--muted-on-dark)]">
         <span>
-          © {new Date().getFullYear()} {site.name} — {site.owner}. Tous droits
+          © {new Date().getFullYear()} {site.name} — {site.owner} EI. Tous droits
           réservés.
         </span>
         <div className="flex gap-[18px]">

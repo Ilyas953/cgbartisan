@@ -25,8 +25,4 @@ export const faq = [
     q: "Proposez-vous le démoussage de toiture ?",
     a: "Oui, nous assurons le nettoyage, le démoussage et le traitement hydrofuge de votre toiture pour la protéger durablement de l'humidité.",
   },
-  {
-    q: "Êtes-vous couvert par une assurance décennale ?",
-    a: `Oui, ${site.name} dispose d'une assurance décennale pour ses travaux.`,
-  },
 ];

@@ -33,8 +33,14 @@ export default function PolitiqueConfidentialite() {
         <li>nom complet ;</li>
         <li>numéro de téléphone ;</li>
         <li>adresse email ;</li>
-        <li>type de projet et contenu de votre message.</li>
+        <li>type de projet et contenu de votre message ;</li>
+        <li>la page du site depuis laquelle la demande a été envoyée.</li>
       </ul>
+      <p>
+        Comme pour tout site web, l&apos;hébergeur enregistre aussi des
+        données techniques de connexion (adresse IP, date, page consultée)
+        nécessaires à la sécurité et au bon fonctionnement du site.
+      </p>
 
       <h2>Finalité et base légale</h2>
       <p>
@@ -55,17 +61,45 @@ export default function PolitiqueConfidentialite() {
 
       <h2>Destinataires</h2>
       <p>
-        Vos données sont destinées à {site.owner}. Elles transitent par notre
-        prestataire d&apos;envoi d&apos;emails et par l&apos;hébergeur du site,
-        qui agissent uniquement pour notre compte.
+        Vos données sont destinées uniquement à {site.owner}. Elles ne sont
+        jamais vendues ni cédées. Pour faire fonctionner le site, elles
+        transitent par les prestataires suivants, qui agissent pour notre
+        compte :
+      </p>
+      <ul>
+        <li>
+          <strong>Vercel Inc.</strong> (États-Unis) : hébergement du site ;
+        </li>
+        <li>
+          <strong>Google LLC</strong> (États-Unis), service Gmail : envoi de
+          l&apos;email contenant votre demande ;
+        </li>
+        <li>
+          <strong>Apple Inc.</strong> (États-Unis), service iCloud Mail :
+          réception de votre demande.
+        </li>
+      </ul>
+
+      <h2>Transferts hors de l&apos;Union européenne</h2>
+      <p>
+        Ces prestataires peuvent traiter des données aux États-Unis. Ces
+        transferts sont encadrés par les garanties prévues par le RGPD :
+        décision d&apos;adéquation de la Commission européenne (EU-US Data
+        Privacy Framework) pour les entreprises certifiées, ou clauses
+        contractuelles types de la Commission européenne.
       </p>
 
       <h2>Cookies et services tiers</h2>
       <p>
-        Ce site n&apos;utilise ni cookies publicitaires ni outil de mesure
-        d&apos;audience. La carte de la zone d&apos;intervention est fournie
-        par Google Maps : son chargement peut déposer des cookies de Google,
-        soumis à la{" "}
+        Ce site ne dépose aucun cookie et n&apos;utilise ni publicité ni outil
+        de mesure d&apos;audience. Les polices de caractères sont hébergées
+        sur ce site : aucune requête n&apos;est envoyée à Google Fonts.
+      </p>
+      <p>
+        La carte de la zone d&apos;intervention est fournie par Google Maps.
+        Elle n&apos;est chargée que si vous cliquez sur « Afficher la carte » :
+        Google reçoit alors votre adresse IP et peut déposer des cookies,
+        conformément à la{" "}
         <a
           href="https://policies.google.com/privacy"
           target="_blank"
@@ -73,7 +107,7 @@ export default function PolitiqueConfidentialite() {
         >
           politique de confidentialité de Google
         </a>
-        . Les polices de caractères sont hébergées sur ce site.
+        . Sans ce clic, aucune donnée n&apos;est transmise à Google.
       </p>
 
       <h2>Vos droits</h2>

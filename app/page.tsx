@@ -13,6 +13,7 @@ import Zone from "@/components/Zone";
 import { faq } from "@/lib/faq";
 import { reviews } from "@/lib/reviews";
 import { profile, site } from "@/lib/site";
+import { villes } from "@/lib/villes";
 
 const cities = [
   "Mouroux",
@@ -86,6 +87,7 @@ const jsonLd = {
       areaServed: [
         { "@type": "AdministrativeArea", name: "Seine-et-Marne" },
         ...cities.map((name) => ({ "@type": "City", name })),
+        ...villes.map((v) => ({ "@type": "City", name: v.name })),
       ],
       knowsAbout: [
         "Couverture",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 import { legal, site } from "@/lib/site";
@@ -12,24 +13,20 @@ export default function MentionsLegales() {
     <LegalPage title="Mentions légales">
       <h2>Éditeur du site</h2>
       <p>
-        <strong>{site.name}</strong> — {site.owner}
+        <strong>{site.owner} EI</strong>, exerçant sous le nom commercial{" "}
+        {site.name}
         <br />
         Statut : {legal.statut}
         <br />
         SIRET : {legal.siret}
         <br />
-        Adresse : {legal.adresse}
+        Adresse du siège : {legal.adresse}
         <br />
         Téléphone : <a href={site.phoneHref}>{site.phone}</a>
         <br />
         Email : <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
       <p>Directeur de la publication : {site.owner}.</p>
-
-      <h2>Assurance professionnelle</h2>
-      <p>
-        Assurance responsabilité décennale : {legal.assureur}.
-      </p>
 
       <h2>Hébergement</h2>
       <p>{legal.hebergeur}</p>
@@ -53,9 +50,9 @@ export default function MentionsLegales() {
       <h2>Données personnelles</h2>
       <p>
         Le traitement de vos données personnelles est détaillé dans notre{" "}
-        <a href="/politique-de-confidentialite">
+        <Link href="/politique-de-confidentialite">
           politique de confidentialité
-        </a>
+        </Link>
         .
       </p>
 

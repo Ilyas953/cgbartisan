@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden h-[90vh]">
       <Image
         src="/images/hero.webp"
-        alt="Vue aérienne d'une toiture en tuiles rouges avec fenêtres de toit, chantier de couverture par C.G.B Artisan, couvreur à Mouroux (77)"
+        alt="Vue aérienne d'une toiture en tuiles rouges avec fenêtres de toit, chantier de couverture réalisé par C.G.B Artisan à Savigny-sur-Orge (91)"
         fill
         priority
         sizes="100vw"

@@ -15,7 +15,7 @@ export const site = {
 export const profile = {
   // Numéro et rue. Laisser vide si vous ne voulez pas publier d'adresse
   // (artisan qui se déplace) : Google utilisera alors la zone d'intervention.
-  streetAddress: "",
+  streetAddress: "58 rue de la Danserie",
   // Coordonnées GPS (clic droit sur Google Maps > copier les coordonnées).
   latitude: undefined as number | undefined,
   longitude: undefined as number | undefined,
@@ -30,16 +30,17 @@ export const profile = {
   // Profils officiels : fiche Google, Facebook, Instagram, Pages Jaunes...
   sameAs: [] as string[],
   // Date de création de l'entreprise, ex. "2020-03-15" ou "2020".
-  foundingDate: "",
+  foundingDate: "2022-08-01",
 };
 
-// Informations légales à compléter (affichées dans les mentions légales).
+// Informations légales (affichées dans les mentions légales).
+// Vérifiées le 25/10/2026 dans l'annuaire des entreprises (recherche-entreprises.api.gouv.fr).
 export const legal = {
-  statut: "[Forme juridique, ex. entreprise individuelle]",
-  siret: "[Numéro SIRET]",
-  adresse: "[Adresse du siège], 77120 Mouroux",
-  assureur: "[Nom et adresse de l'assureur décennal, zone de couverture]",
-  hebergeur: "[Nom, adresse et téléphone de l'hébergeur du site]",
+  statut: "Entrepreneur individuel (EI)",
+  siret: "918 398 678 00022",
+  adresse: "58 rue de la Danserie, 77120 Mouroux",
+  hebergeur:
+    "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — https://vercel.com",
 };
 
 export const navLinks = [

@@ -3,7 +3,6 @@ import { CheckIcon } from "./icons";
 const items = [
   "Devis gratuit sous 24h",
   "Intervention rapide en Seine-et-Marne",
-  "Assurance décennale",
   "Artisan de proximité, travail soigné",
 ];
 

@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { villes } from "@/lib/villes";
+import MapEmbed from "./MapEmbed";
+
 const towns = [
   "Mouroux",
   "Coulommiers",
@@ -29,15 +33,27 @@ export default function Zone() {
               </li>
             ))}
           </ul>
+          <h3 className="mt-4 font-body text-base font-bold">
+            Nous intervenons aussi en Île-de-France
+          </h3>
+          <ul className="flex flex-wrap gap-2.5">
+            {villes.map((v) => (
+              <li key={v.slug}>
+                <Link
+                  href={`/${v.slug}`}
+                  className="chip inline-block hover:border-[var(--gold)]"
+                >
+                  Couvreur à {v.name} ({v.departmentCode})
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="photo-frame !h-[340px]">
-          <iframe
+          <MapEmbed
+            query="Mouroux 77120"
             title="Carte de la zone d'intervention — Mouroux (77)"
-            src="https://www.google.com/maps?q=Mouroux+77120&z=10&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="h-full w-full border-0 opacity-90 [filter:grayscale(0.4)_invert(0.9)_hue-rotate(180deg)]"
           />
         </div>
       </div>

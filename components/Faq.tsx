@@ -1,18 +1,24 @@
-import { faq } from "@/lib/faq";
+import { faq as defaultFaq } from "@/lib/faq";
 
-export default function Faq() {
+type FaqItem = { q: string; a: string };
+
+export default function Faq({
+  items = defaultFaq,
+  title = "Toiture à Mouroux : vos questions, nos réponses",
+}: {
+  items?: FaqItem[];
+  title?: string;
+}) {
   return (
     <section id="faq" className="section-pad bg-[var(--paper)]">
       <div className="wrap mx-auto max-w-3xl">
         <div className="section-head">
           <span className="eyebrow">Questions fréquentes</span>
-          <h2 className="section-title">
-            Toiture à Mouroux : vos questions, nos réponses
-          </h2>
+          <h2 className="section-title">{title}</h2>
         </div>
 
         <div className="flex flex-col gap-3">
-          {faq.map((item) => (
+          {items.map((item) => (
             <details
               key={item.q}
               className="group rounded-[4px] border border-[var(--paper-line)] bg-[var(--paper-soft)] open:border-[var(--gold-line)]"

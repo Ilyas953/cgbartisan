@@ -1,11 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { projectTypes } from "@/lib/site";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-export default function ContactForm() {
+export default function ContactForm({
+  source = "Page d'accueil",
+}: {
+  source?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -97,6 +102,8 @@ export default function ContactForm() {
         />
       </div>
 
+      <input type="hidden" name="source" value={source} />
+
       {/* Honeypot anti-spam : invisible pour les humains */}
       <input
         type="text"
@@ -123,6 +130,20 @@ export default function ContactForm() {
           </span>
         )}
         {status === "error" && <span className="text-red-400">{error}</span>}
+      </p>
+
+      <p className="text-[12px] leading-[1.6] text-[var(--muted-on-dark)]">
+        Les informations saisies sont utilisées par C.G.B Artisan uniquement
+        pour répondre à votre demande de devis et sont conservées au maximum 3
+        ans. Vous pouvez y accéder, les rectifier ou les faire supprimer à tout
+        moment. En savoir plus :{" "}
+        <Link
+          href="/politique-de-confidentialite"
+          className="text-[var(--gold)] underline"
+        >
+          politique de confidentialité
+        </Link>
+        .
       </p>
     </form>
   );

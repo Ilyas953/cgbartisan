@@ -24,6 +24,7 @@ export async function POST(request: Request) {
   const email = clean(body.email, 200);
   const projet = clean(body.projet, 80);
   const message = clean(body.message, 5000);
+  const source = clean(body.source, 100);
 
   if (!nom || !tel || !email || !message) {
     return json({ error: "Merci de remplir tous les champs." }, 400);
@@ -73,6 +74,7 @@ export async function POST(request: Request) {
         `Téléphone : ${tel}`,
         `Email : ${email}`,
         `Type de projet : ${projet || "Autre"}`,
+        ...(source ? [`Envoyé depuis : ${source}`] : []),
         "",
         message,
       ].join("\n"),
